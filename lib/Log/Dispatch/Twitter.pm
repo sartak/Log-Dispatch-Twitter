@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use base 'Log::Dispatch::Output';
 
+use Net::Twitter;
+
 sub new {
     my $class = shift;
     my $self = bless {}, $class;
