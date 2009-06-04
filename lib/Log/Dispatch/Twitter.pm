@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use base 'Log::Dispatch::Output';
 
+our $VERSION = 0.03;
+
 use Net::Twitter;
 
 sub new {
