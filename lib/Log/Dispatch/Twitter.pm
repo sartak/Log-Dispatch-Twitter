@@ -1,4 +1,3 @@
-#!/usr/bin/env perl
 package Log::Dispatch::Twitter;
 use strict;
 use warnings;
