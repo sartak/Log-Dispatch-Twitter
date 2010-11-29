@@ -21,6 +21,15 @@ sub _init {
     my $self = shift;
     my %args = @_;
 
+    # Remove Log::Dispatch::Output constructor args
+    delete @args{qw{
+        name
+        min_level
+        max_level
+        callbacks
+        newline
+    }};
+
     $self->{args} = \%args;
 }
 
