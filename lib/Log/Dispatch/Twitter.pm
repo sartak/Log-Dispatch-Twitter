@@ -1,6 +1,7 @@
 package Log::Dispatch::Twitter;
 use strict;
 use warnings;
+use 5.008001;
 use base 'Log::Dispatch::Output';
 
 our $VERSION = 0.03;
