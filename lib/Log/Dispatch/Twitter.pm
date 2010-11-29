@@ -21,8 +21,7 @@ sub _init {
     my $self = shift;
     my %args = @_;
 
-    $self->{username} = $args{username};
-    $self->{password} = $args{password};
+    $self->{args} = \%args;
 }
 
 sub log_message {
@@ -42,10 +41,7 @@ sub _post_message {
     my $self    = shift;
     my $message = shift;
 
-    my $twitter = Net::Twitter->new(
-        username  => $self->{username},
-        password  => $self->{password},
-    );
+    my $twitter = Net::Twitter->new(%{ $self->{args} });
 
     $twitter->update($message);
 }
